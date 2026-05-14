@@ -55,9 +55,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .hero-img-wrap{position:relative;width:100%;max-width:380px}
 .hero-shoe-card{background:white;padding:2.5rem;box-shadow:20px 20px 60px rgba(11,27,58,0.12);position:relative}
 .hero-shoe-card::before{content:'NEW ARRIVAL';position:absolute;top:-12px;left:2rem;background:var(--gold);color:var(--navy);font-size:0.65rem;letter-spacing:0.2em;padding:0.3rem 0.8rem;font-weight:500}
-.shoe-placeholder{width:100%;height:260px;background:linear-gradient(135deg,#e8e4df 0%,#d4cfc9 100%);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;overflow:hidden}
-.shoe-icon{font-size:5rem;opacity:0.3}
-.shoe-silhouette{position:absolute;width:80%;height:70%;background:var(--navy);opacity:0.08;border-radius:40% 60% 60% 40% / 40% 40% 60% 60%;transform:rotate(-15deg)}
+.shoe-placeholder{width:100%;height:260px;background:#e8e4df;display:block;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.shoe-placeholder img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
 .shoe-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem}
 .shoe-price{font-size:1rem;color:var(--gold);font-weight:500}
 .shoe-meta{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cream-dark)}
@@ -77,8 +76,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 
 /* ABOUT */
 .about{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:70vh}
-.about-img{background:var(--navy-light);display:flex;align-items:center;justify-content:center;position:relative;min-height:500px}
+.about-img{background:var(--navy-light);display:flex;align-items:center;justify-content:center;position:relative;min-height:500px;overflow:hidden}
 .about-pattern{width:100%;height:100%;position:absolute;opacity:0.05;background-image:repeating-linear-gradient(45deg,var(--cream) 0,var(--cream) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.about-img > img{width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;top:0;left:0;display:block}
 .about-icon-wrap{position:relative;z-index:1;text-align:center}
 .about-big-icon{font-size:8rem;opacity:0.15;color:var(--cream)}
 .about-badge-float{position:absolute;bottom:2rem;right:2rem;background:var(--gold);padding:1.5rem;text-align:center}
@@ -103,9 +103,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .product-card{background:var(--cream);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;position:relative}
 .product-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(11,27,58,0.12)}
 .product-card.featured{grid-column:span 2}
-.product-img{height:280px;background:linear-gradient(135deg,#ddd9d3 0%,#cac5be 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-img{width:100%;height:280px;background:#e8e4df;display:block;position:relative;overflow:hidden}
 .product-card.featured .product-img{height:360px}
-.product-img-icon{font-size:4rem;opacity:0.2;color:var(--navy)}
+.product-img img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.4s ease}
+.product-card:hover .product-img img{transform:scale(1.06)}
+.product-img-icon{display:contents}
 .product-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,27,58,0.7));padding:1.5rem;transform:translateY(100%);transition:transform 0.3s}
 .product-card:hover .product-overlay{transform:translateY(0)}
 .overlay-btn{background:var(--gold);color:var(--navy);border:none;padding:0.6rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%}
@@ -258,10 +260,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     <div class="hero-img-wrap">
       <div class="hero-shoe-card">
         <div class="shoe-placeholder">
-          <div class="shoe-silhouette"></div>
-          <span class="shoe-icon">
-            <img src="111.jpeg" alt="">
-          </span>
+          <img src="111.jpeg" alt="The Executive Oxford"/>
         </div>
         <div class="shoe-name">The Executive Oxford</div>
         <div class="shoe-price">₦45,000</div>
@@ -298,11 +297,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
 <section class="about" id="about">
   <div class="about-img">
     <div class="about-pattern"></div>
-    <div class="about-icon-wrap">
-      <div class="about-big-icon">
-        <img src="WhatsApp Image 2026-05-05 at 8.32.16 PM.jpeg" alt="">
-      </div>
-    </div>
+    <img src="WhatsApp Image 2026-05-05 at 8.32.16 PM.jpeg" alt="Abilux Wears Craftsmanship"/>
     <div class="about-badge-float">
       <span class="num">500+</span>
       <span class="lbl">Happy Customers</span>
@@ -333,9 +328,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
   <div class="products-grid">
     <div class="product-card featured">
       <div class="product-img" style="height:360px">
-        <span class="product-img-icon">
-          <img src="123.jpeg" alt="">
-        </span>
+        <img src="123.jpeg" alt="The Abilux Classic Oxford"/>
         <div class="product-overlay">
           <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
@@ -349,9 +342,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     </div>
     <div class="product-card">
       <div class="product-img">
-        <span class="product-img-icon">
-          <img src="121.jpeg" alt="">
-        </span>
+        <img src="121.jpeg" alt="Urban Leather Loafer"/>
         <div class="product-overlay">
           <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
@@ -365,9 +356,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     </div>
     <div class="product-card">
       <div class="product-img">
-        <span class="product-img-icon">
-          <img src="11.jpeg" alt="">
-        </span>
+        <img src="11.jpeg" alt="Abilux Court Heel"/>
         <div class="product-overlay">
           <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
@@ -380,9 +369,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     </div>
     <div class="product-card">
       <div class="product-img">
-        <span class="product-img-icon">
-          <img src="111.jpeg" alt="">
-        </span>
+        <img src="111.jpeg" alt="Executive Derby Boot"/>
         <div class="product-overlay">
           <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
@@ -396,9 +383,7 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     </div>
     <div class="product-card">
       <div class="product-img">
-        <span class="product-img-icon">
-          <img src="1.jpeg" alt="">
-        </span>
+        <img src="1.jpeg" alt="Custom Order"/>
         <div class="product-overlay">
           <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
@@ -558,9 +543,9 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
 <div class="contact-strip">
   <div class="contact-strip-text">Get in touch with us today</div>
   <div class="contact-info">
-    <div class="contact-item">📞 +234 800 000 0000</div>
-    <div class="contact-item">📧 hello@abiluxwears.com</div>
-    <div class="contact-item">📍 Nigeria</div>
+    <div class="contact-item">📞 +234 903 992 8275</div>
+    <div class="contact-item">📧 abiluxwears@gmail.com</div>
+    <div class="contact-item"> Nigeria</div>
   </div>
 </div>
 
@@ -593,10 +578,11 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
     <div>
       <div class="footer-heading">Contact</div>
       <ul class="footer-links">
-        <li><a href="https://wa.me/2348000000000" target="_blank">WhatsApp Us</a></li>
-        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
-        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="mailto:hello@abiluxwears.com">Email Us</a></li>
+        <li><a href="https://wa.me/+2349039928275" target="_blank">WhatsApp Us</a></li>
+        <li><a href="https://www.instagram.com/abilux_wears?igsh=YXVxNmZud3Y3YWJo" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/share/1BaJFXnxof/" target="_blank">Facebook</a></li>
+        <li><a href="https://vm.tiktok.com/ZS9F7d5Tcu4DC-AJKZZ/" target="_blank">TikTok</a></li>
+        <li><a href="mailto:abiluxwears@gmail.com">Email Us</a></li>
       </ul>
     </div>
   </div>
