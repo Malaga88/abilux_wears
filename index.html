@@ -30,7 +30,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links{display:flex;gap:2.5rem;list-style:none}
 .nav-links a{font-size:0.82rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--navy);color:var(--cream);padding:0.6rem 1.5rem;border:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+.nav-cta{background:var(--navy);color:var(--cream);padding:0.6rem 1.5rem;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
 .nav-cta:hover{background:var(--navy-mid)}
 
 /* HERO */
@@ -597,15 +597,33 @@ footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)
 </footer>
 
 <script>
-function handleOrder(){
-  var fname = document.getElementById('fname').value.trim();
-  var phone = document.getElementById('phone').value.trim();
-  var service = document.getElementById('service').value;
-  if(!fname || !phone || !service){
+function handleOrder() {
+  const fname = document.getElementById('fname').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const service = document.getElementById('service').value;
+
+  // 1. Validation
+  if (!fname || !phone || !service) {
     alert('Please fill in your name, phone number, and select a service.');
     return;
   }
-  alert('Thank you, ' + fname + '! Your order request has been received. We will contact you on ' + phone + ' within 24 hours.');
+
+  // 2. Your WhatsApp Number (Include country code, no "+" or spaces)
+  // Example: 2348012345678 for Nigeria
+  const myWhatsAppNumber = "2349039928275"; 
+
+  // 3. Create the Message Template
+  const message = `*New Order Request* 🛍️%0A%0A` +
+                  `*Name:* ${fname}%0A` +
+                  `*Phone:* ${phone}%0A` +
+                  `*Service:* ${service}%0A%0A` +
+                  `Please get back to me as soon as possible.`;
+
+  // 4. Construct the URL
+  const whatsappURL = `https://wa.me/${myWhatsAppNumber}?text=${message}`;
+
+  // 5. Open WhatsApp
+  window.open(whatsappURL, '_blank').focus();
 }
 </script>
 
