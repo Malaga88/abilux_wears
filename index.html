@@ -1,1053 +1,627 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abilux Wears — Luxury Footwear</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="description" content="Abilux Wears — Handcrafted premium shoes made in Nigeria. Bespoke shoemaking, custom orders, corporate bulk orders and nationwide delivery."/>
+<meta name="author" content="Abilux Wears"/>
+<title>Abilux Wears | Handcrafted Premium Shoes — Made in Nigeria</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#0B1B3A;
+  --navy-light:#152848;
+  --navy-mid:#1E3A5F;
+  --cream:#FDFCFB;
+  --cream-dark:#F0EDE8;
+  --gold:#C9A96E;
+  --gold-light:#E8D5A3;
+  --text-dark:#0B1B3A;
+  --text-muted:#6B7A8D;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden}
 
-  :root {
-    --gold: #C9A84C;
-    --gold-light: #E8C97A;
-    --gold-dark: #8B6914;
-    --cream: #FAF7F2;
-    --dark: #0D0D0D;
-    --dark2: #1A1A1A;
-    --dark3: #252525;
-    --text-muted: #888;
-    --text-light: #BBB;
-    --serif: 'Cormorant Garamond', Georgia, serif;
-    --sans: 'Montserrat', sans-serif;
-  }
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 4rem;background:rgba(253,252,251,0.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,27,58,0.08)}
+.logo{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;letter-spacing:0.04em;color:var(--navy)}
+.logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:0.82rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--navy);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:var(--navy);color:var(--cream);padding:0.6rem 1.5rem;border:none;font-family:'DM Sans',sans-serif;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:background 0.2s}
+.nav-cta:hover{background:var(--navy-mid)}
 
-  html { scroll-behavior: smooth; }
+/* HERO */
+.hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden}
+.hero-left{background:var(--navy);display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 4rem 4rem;position:relative}
+.hero-left::after{content:'';position:absolute;right:-1px;top:0;bottom:0;width:60px;background:var(--cream-dark);clip-path:polygon(100% 0,100% 100%,0 100%)}
+.hero-eyebrow{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem}
+.hero-eyebrow::before{content:'';width:30px;height:1px;background:var(--gold)}
+.hero-title{font-family:'Cormorant Garamond',serif;font-size:clamp(3rem,5vw,5rem);font-weight:300;line-height:1.05;color:var(--cream);margin-bottom:1.5rem}
+.hero-title em{font-style:italic;color:var(--gold-light)}
+.hero-sub{font-size:0.9rem;line-height:1.8;color:rgba(253,252,251,0.65);max-width:360px;margin-bottom:2.5rem}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--gold);color:var(--navy);padding:0.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;transition:all 0.2s}
+.btn-primary:hover{background:var(--gold-light)}
+.btn-outline{background:transparent;color:var(--cream);padding:0.85rem 2rem;font-family:'DM Sans',sans-serif;font-size:0.8rem;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;border:1px solid rgba(253,252,251,0.3);cursor:pointer;transition:all 0.2s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.hero-stats{display:flex;gap:2.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid rgba(253,252,251,0.1)}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:600;color:var(--gold);display:block}
+.stat-label{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(253,252,251,0.5)}
 
-  body {
-    background: var(--dark);
-    color: var(--cream);
-    font-family: var(--sans);
-    font-weight: 300;
-    overflow-x: hidden;
-  }
+.hero-right{background:var(--cream-dark);display:flex;align-items:center;justify-content:center;padding:8rem 4rem 4rem 6rem;position:relative}
+.hero-img-wrap{position:relative;width:100%;max-width:380px}
+.hero-shoe-card{background:white;padding:2.5rem;box-shadow:20px 20px 60px rgba(11,27,58,0.12);position:relative}
+.hero-shoe-card::before{content:'NEW ARRIVAL';position:absolute;top:-12px;left:2rem;background:var(--gold);color:var(--navy);font-size:0.65rem;letter-spacing:0.2em;padding:0.3rem 0.8rem;font-weight:500}
+.shoe-placeholder{width:100%;height:260px;background:linear-gradient(135deg,#e8e4df 0%,#d4cfc9 100%);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;position:relative;overflow:hidden}
+.shoe-icon{font-size:5rem;opacity:0.3}
+.shoe-silhouette{position:absolute;width:80%;height:70%;background:var(--navy);opacity:0.08;border-radius:40% 60% 60% 40% / 40% 40% 60% 60%;transform:rotate(-15deg)}
+.shoe-name{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:600;color:var(--navy);margin-bottom:0.3rem}
+.shoe-price{font-size:1rem;color:var(--gold);font-weight:500}
+.shoe-meta{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;padding-top:1rem;border-top:1px solid var(--cream-dark)}
+.shoe-type{font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)}
+.shoe-badge{background:var(--navy);color:var(--cream);font-size:0.65rem;letter-spacing:0.1em;padding:0.25rem 0.7rem}
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 1.5rem 5%;
-    background: linear-gradient(to bottom, rgba(13,13,13,0.95), transparent);
-    transition: background 0.4s;
-  }
-  nav.scrolled { background: rgba(13,13,13,0.97); border-bottom: 1px solid rgba(201,168,76,0.15); }
+.floating-tag{position:absolute;background:var(--navy);color:var(--cream);padding:0.8rem 1.2rem;font-size:0.75rem;letter-spacing:0.08em}
+.tag-tl{top:-20px;right:-20px}
+.tag-bl{bottom:-20px;left:-20px;background:var(--gold);color:var(--navy)}
 
-  .nav-logo {
-    font-family: var(--serif);
-    font-size: 1.6rem;
-    font-weight: 300;
-    letter-spacing: 0.12em;
-    color: var(--gold);
-    text-decoration: none;
-  }
-  .nav-logo span { font-style: italic; }
+/* MARQUEE */
+.marquee-wrap{background:var(--navy);padding:1rem 0;overflow:hidden}
+.marquee-inner{display:flex;gap:3rem;animation:marquee 20s linear infinite;white-space:nowrap}
+.marquee-item{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(253,252,251,0.5);display:flex;align-items:center;gap:1rem}
+.marquee-dot{width:4px;height:4px;background:var(--gold);border-radius:50%;flex-shrink:0}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
-  .nav-links a {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--text-light);
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--gold); }
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:70vh}
+.about-img{background:var(--navy-light);display:flex;align-items:center;justify-content:center;position:relative;min-height:500px}
+.about-pattern{width:100%;height:100%;position:absolute;opacity:0.05;background-image:repeating-linear-gradient(45deg,var(--cream) 0,var(--cream) 1px,transparent 0,transparent 50%);background-size:20px 20px}
+.about-icon-wrap{position:relative;z-index:1;text-align:center}
+.about-big-icon{font-size:8rem;opacity:0.15;color:var(--cream)}
+.about-badge-float{position:absolute;bottom:2rem;right:2rem;background:var(--gold);padding:1.5rem;text-align:center}
+.about-badge-float .num{font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:600;color:var(--navy);display:block;line-height:1}
+.about-badge-float .lbl{font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--navy);opacity:0.7}
 
-  .nav-cta {
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--dark);
-    background: var(--gold);
-    padding: 0.6rem 1.4rem;
-    text-decoration: none;
-    transition: background 0.3s;
-  }
-  .nav-cta:hover { background: var(--gold-light); }
+.about-content{padding:6rem 5rem;display:flex;flex-direction:column;justify-content:center;background:var(--cream)}
+.section-eyebrow{font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.8rem}
+.section-eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3.5vw,3rem);font-weight:300;line-height:1.15;color:var(--navy);margin-bottom:1.5rem}
+.section-title em{font-style:italic;color:var(--gold)}
+.about-text{font-size:0.92rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.2rem}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1rem}
+.feature-item{display:flex;gap:0.8rem;align-items:flex-start}
+.feature-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;margin-top:6px;flex-shrink:0}
+.feature-text{font-size:0.82rem;color:var(--text-dark);font-weight:400;line-height:1.5}
 
-  .nav-hamburger { display: none; cursor: pointer; flex-direction: column; gap: 5px; }
-  .nav-hamburger span { display: block; width: 22px; height: 1px; background: var(--gold); transition: 0.3s; }
+/* PRODUCTS */
+.products{padding:7rem 4rem;background:var(--cream-dark)}
+.section-header{text-align:center;margin-bottom:4rem}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
+.product-card{background:var(--cream);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;cursor:pointer;position:relative}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(11,27,58,0.12)}
+.product-card.featured{grid-column:span 2}
+.product-img{height:280px;background:linear-gradient(135deg,#ddd9d3 0%,#cac5be 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.product-card.featured .product-img{height:360px}
+.product-img-icon{font-size:4rem;opacity:0.2;color:var(--navy)}
+.product-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(11,27,58,0.7));padding:1.5rem;transform:translateY(100%);transition:transform 0.3s}
+.product-card:hover .product-overlay{transform:translateY(0)}
+.overlay-btn{background:var(--gold);color:var(--navy);border:none;padding:0.6rem 1.5rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;width:100%}
+.product-info{padding:1.2rem 1.5rem 1.5rem}
+.product-cat{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem}
+.product-name{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:0.2rem}
+.product-price{font-size:0.9rem;color:var(--gold);font-weight:500}
+.product-tag{position:absolute;top:1rem;left:1rem;background:var(--navy);color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;padding:0.25rem 0.6rem;text-transform:uppercase}
 
-  /* ── HERO ── */
-  #hero {
-    min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-    background: var(--dark2);
-  }
+/* SERVICES */
+.services{padding:7rem 4rem;background:var(--navy)}
+.services-header{text-align:center;margin-bottom:4rem}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(253,252,251,0.1);max-width:1100px;margin:0 auto}
+.service-item{background:var(--navy);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s}
+.service-item::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.service-item:hover::before{transform:scaleX(1)}
+.service-item:hover{background:var(--navy-mid)}
+.service-num{font-family:'Cormorant Garamond',serif;font-size:3.5rem;font-weight:300;color:rgba(201,169,110,0.15);line-height:1;margin-bottom:1rem}
+.service-icon{font-size:1.8rem;color:var(--gold);margin-bottom:1rem;display:block}
+.service-name{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:0.8rem}
+.service-desc{font-size:0.82rem;line-height:1.8;color:rgba(253,252,251,0.55)}
+.service-price{margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(253,252,251,0.08);font-size:0.8rem;color:var(--gold)}
 
-  .hero-bg {
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 60% 50% at 70% 60%, rgba(201,168,76,0.07) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 30%, rgba(201,168,76,0.04) 0%, transparent 60%);
-  }
+/* TESTIMONIALS */
+.testimonials{padding:7rem 4rem;background:var(--cream);overflow:hidden}
+.testimonials-header{text-align:center;margin-bottom:4rem}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1100px;margin:0 auto}
+.testi-card{background:var(--cream-dark);padding:2rem;position:relative}
+.testi-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:5rem;color:var(--gold);opacity:0.3;position:absolute;top:-10px;left:1.5rem;line-height:1}
+.testi-stars{color:var(--gold);font-size:0.8rem;letter-spacing:0.1em;margin-bottom:1rem}
+.testi-text{font-size:0.88rem;line-height:1.8;color:var(--text-dark);font-style:italic;margin-bottom:1.5rem}
+.testi-author{display:flex;align-items:center;gap:0.8rem}
+.testi-avatar{width:38px;height:38px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:0.75rem;color:var(--cream);font-weight:500}
+.testi-name{font-size:0.82rem;font-weight:500;color:var(--navy)}
+.testi-loc{font-size:0.72rem;color:var(--text-muted)}
 
-  .hero-lines {
-    position: absolute; inset: 0; pointer-events: none;
-    background-image: repeating-linear-gradient(
-      90deg, rgba(201,168,76,0.03) 0px, rgba(201,168,76,0.03) 1px, transparent 1px, transparent 80px
-    );
-  }
+/* ORDER FORM */
+.order-cta{padding:7rem 4rem;background:var(--navy-light);display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.order-content .section-title{color:var(--cream)}
+.order-content .section-eyebrow::before{background:var(--gold)}
+.order-text{font-size:0.9rem;line-height:1.9;color:rgba(253,252,251,0.6);margin-bottom:2rem}
+.order-form{background:rgba(253,252,251,0.04);border:1px solid rgba(253,252,251,0.1);padding:2.5rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}
+.form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+.form-label{font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:rgba(253,252,251,0.5)}
+.form-input{background:rgba(253,252,251,0.06);border:1px solid rgba(253,252,251,0.12);color:var(--cream);padding:0.75rem 1rem;font-family:'DM Sans',sans-serif;font-size:0.88rem;outline:none;transition:border-color 0.2s;width:100%}
+.form-input:focus{border-color:var(--gold)}
+.form-input::placeholder{color:rgba(253,252,251,0.25)}
+select.form-input{appearance:none;cursor:pointer}
+select.form-input option{background:var(--navy-light);color:var(--cream)}
+.submit-btn{width:100%;background:var(--gold);color:var(--navy);border:none;padding:1rem;font-family:'DM Sans',sans-serif;font-size:0.82rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;transition:background 0.2s;margin-top:0.5rem}
+.submit-btn:hover{background:var(--gold-light)}
 
-  .hero-content {
-    position: relative; z-index: 2;
-    text-align: center; padding: 0 2rem;
-    max-width: 900px;
-  }
+/* CONTACT STRIP */
+.contact-strip{background:var(--gold);padding:2rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.contact-strip-text{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:400;color:var(--navy)}
+.contact-info{display:flex;gap:2.5rem;flex-wrap:wrap}
+.contact-item{display:flex;align-items:center;gap:0.6rem;font-size:0.82rem;color:var(--navy)}
 
-  .hero-eyebrow {
-    font-size: 0.65rem;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeUp 1s 0.3s forwards;
-  }
+/* FOOTER */
+footer{background:var(--navy);padding:4rem 4rem 2rem;color:rgba(253,252,251,0.6)}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(253,252,251,0.08)}
+.footer-brand .logo{display:block;margin-bottom:1rem;font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:600;color:var(--cream)}
+.footer-brand .logo span{color:var(--gold)}
+.footer-desc{font-size:0.82rem;line-height:1.8;max-width:260px}
+.footer-heading{font-size:0.72rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--cream);margin-bottom:1.2rem}
+.footer-links{list-style:none;display:flex;flex-direction:column;gap:0.6rem}
+.footer-links a{font-size:0.82rem;color:rgba(253,252,251,0.55);text-decoration:none;transition:color 0.2s}
+.footer-links a:hover{color:var(--gold)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.copyright{font-size:0.75rem;color:rgba(253,252,251,0.35)}
+.footer-socials{display:flex;gap:1rem}
+.social-link{width:32px;height:32px;border:1px solid rgba(253,252,251,0.15);display:flex;align-items:center;justify-content:center;font-size:0.7rem;color:rgba(253,252,251,0.5);text-decoration:none;transition:all 0.2s}
+.social-link:hover{border-color:var(--gold);color:var(--gold)}
 
-  .hero-title {
-    font-family: var(--serif);
-    font-size: clamp(3.5rem, 9vw, 8rem);
-    font-weight: 300;
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-    margin-bottom: 2rem;
-    opacity: 0;
-    animation: fadeUp 1s 0.5s forwards;
-  }
-  .hero-title em { font-style: italic; color: var(--gold); }
+/* ANIMATIONS */
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+.hero-left > *{animation:fadeUp 0.8s ease forwards;opacity:0}
+.hero-left > *:nth-child(1){animation-delay:0.1s}
+.hero-left > *:nth-child(2){animation-delay:0.25s}
+.hero-left > *:nth-child(3){animation-delay:0.4s}
+.hero-left > *:nth-child(4){animation-delay:0.55s}
+.hero-left > *:nth-child(5){animation-delay:0.7s}
 
-  .hero-subtitle {
-    font-size: 0.8rem;
-    letter-spacing: 0.15em;
-    color: var(--text-muted);
-    max-width: 400px;
-    margin: 0 auto 3rem;
-    line-height: 2;
-    opacity: 0;
-    animation: fadeUp 1s 0.7s forwards;
-  }
-
-  .hero-actions {
-    display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;
-    opacity: 0;
-    animation: fadeUp 1s 0.9s forwards;
-  }
-
-  .btn-primary {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    background: var(--gold);
-    color: var(--dark);
-    font-size: 0.65rem;
-    font-weight: 500;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-
-  .btn-outline {
-    display: inline-block;
-    padding: 1rem 2.5rem;
-    border: 1px solid rgba(201,168,76,0.4);
-    color: var(--gold);
-    font-size: 0.65rem;
-    font-weight: 400;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
-
-  .hero-scroll {
-    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
-    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
-    font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--text-muted); animation: pulse 2s infinite;
-  }
-  .hero-scroll::after {
-    content: ''; display: block; width: 1px; height: 40px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
-  }
-
-  /* ── SECTION BASICS ── */
-  section { padding: 7rem 5%; }
-  .section-eyebrow {
-    font-size: 0.6rem; letter-spacing: 0.4em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 1rem; display: block;
-  }
-  .section-title {
-    font-family: var(--serif);
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-  }
-  .section-title em { font-style: italic; color: var(--gold); }
-
-  .divider {
-    width: 60px; height: 1px; background: var(--gold);
-    margin: 2rem 0;
-  }
-
-  /* ── ABOUT / MISSION ── */
-  #about { background: var(--dark); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
-    align-items: center; max-width: 1200px; margin: 0 auto;
-  }
-  .about-text p {
-    font-size: 0.9rem; line-height: 2; color: var(--text-muted);
-    margin-bottom: 1.5rem;
-  }
-  .about-visual {
-    position: relative;
-  }
-  .about-frame {
-    width: 100%; aspect-ratio: 3/4;
-    border: 1px solid rgba(201,168,76,0.2);
-    background: var(--dark3);
-    display: flex; align-items: center; justify-content: center;
-    position: relative; overflow: hidden;
-  }
-  .about-frame::before {
-    content: '';
-    position: absolute; top: 1rem; left: 1rem; right: 1rem; bottom: 1rem;
-    border: 1px solid rgba(201,168,76,0.1);
-    pointer-events: none; z-index: 1;
-  }
-  .about-frame-label {
-    position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
-    font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
-    color: var(--gold); z-index: 2;
-  }
-  .about-shoe-icon {
-    font-size: 5rem; opacity: 0.15;
-  }
-
-  /* Mission/Vision Cards */
-  .mv-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 2px;
-    margin-top: 5rem; max-width: 1200px; margin-left: auto; margin-right: auto;
-  }
-  .mv-card {
-    background: var(--dark2);
-    padding: 3rem;
-    border-top: 1px solid rgba(201,168,76,0.2);
-    position: relative; overflow: hidden;
-  }
-  .mv-card::after {
-    content: '';
-    position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-    background: linear-gradient(90deg, var(--gold), transparent);
-    transform: scaleX(0); transform-origin: left;
-    transition: transform 0.5s;
-  }
-  .mv-card:hover::after { transform: scaleX(1); }
-  .mv-number {
-    font-family: var(--serif);
-    font-size: 4rem; font-weight: 300;
-    color: rgba(201,168,76,0.1);
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-  .mv-label {
-    font-size: 0.6rem; letter-spacing: 0.35em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 1rem; display: block;
-  }
-  .mv-text {
-    font-size: 0.85rem; line-height: 1.9; color: var(--text-muted);
-  }
-
-  /* ── GALLERY ── */
-  #gallery { background: var(--dark2); }
-  .gallery-header {
-    max-width: 1200px; margin: 0 auto 4rem;
-    display: flex; align-items: flex-end; justify-content: space-between;
-  }
-  .gallery-filter {
-    display: flex; gap: 1.5rem; list-style: none;
-  }
-  .gallery-filter button {
-    background: none; border: none; cursor: pointer;
-    font-family: var(--sans); font-size: 0.65rem;
-    letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted); transition: color 0.3s;
-    padding: 0.3rem 0;
-    border-bottom: 1px solid transparent;
-  }
-  .gallery-filter button.active,
-  .gallery-filter button:hover { color: var(--gold); border-bottom-color: var(--gold); }
-
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    max-width: 1200px; margin: 0 auto;
-  }
-  .gallery-item {
-    position: relative; overflow: hidden;
-    aspect-ratio: 3/4;
-    background: var(--dark3);
-    cursor: pointer;
-  }
-  .gallery-item.wide { grid-column: span 2; aspect-ratio: unset; }
-  .gallery-item.tall { grid-row: span 2; }
-
-  .shoe-render {
-    width: 100%; height: 100%;
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    padding: 2rem;
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-  .gallery-item:hover .shoe-render { transform: scale(1.04); }
-
-  .shoe-emoji { font-size: 4rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 20px rgba(201,168,76,0.3)); }
-  .shoe-name {
-    font-family: var(--serif); font-size: 1.1rem; font-weight: 300;
-    color: var(--cream); text-align: center;
-  }
-  .shoe-price {
-    font-size: 0.65rem; letter-spacing: 0.2em;
-    color: var(--gold); margin-top: 0.4rem;
-  }
-
-  .gallery-overlay {
-    position: absolute; inset: 0;
-    background: rgba(0,0,0,0);
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: flex-end;
-    padding: 2rem;
-    opacity: 0;
-    transition: all 0.4s;
-  }
-  .gallery-item:hover .gallery-overlay {
-    background: rgba(0,0,0,0.6);
-    opacity: 1;
-  }
-
-  .overlay-title {
-    font-family: var(--serif); font-size: 1.4rem; font-weight: 300;
-    color: #fff; text-align: center; margin-bottom: 0.5rem;
-  }
-  .overlay-price {
-    font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold);
-    margin-bottom: 1.5rem;
-  }
-  .overlay-order {
-    display: flex; align-items: center; gap: 0.6rem;
-    background: #25D366;
-    color: #fff;
-    padding: 0.7rem 1.5rem;
-    font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.15em; text-transform: uppercase;
-    text-decoration: none;
-    transition: background 0.3s;
-    border: none; cursor: pointer; font-family: var(--sans);
-  }
-  .overlay-order:hover { background: #1ea855; }
-  .whatsapp-icon { width: 16px; height: 16px; fill: white; flex-shrink: 0; }
-
-  /* ── PROCESS ── */
-  #process { background: var(--dark); }
-  .process-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 0; max-width: 1200px; margin: 4rem auto 0;
-  }
-  .process-step {
-    padding: 2.5rem 2rem;
-    border-left: 1px solid rgba(201,168,76,0.1);
-    position: relative;
-  }
-  .process-step:first-child { border-left: none; }
-  .process-num {
-    font-family: var(--serif); font-size: 3.5rem; font-weight: 300;
-    color: rgba(201,168,76,0.15); line-height: 1;
-    margin-bottom: 1.5rem;
-  }
-  .process-title {
-    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--cream); margin-bottom: 1rem;
-  }
-  .process-text { font-size: 0.8rem; line-height: 1.9; color: var(--text-muted); }
-
-  /* ── TESTIMONIALS ── */
-  #reviews { background: var(--dark2); }
-  .reviews-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr);
-    gap: 2px; max-width: 1200px; margin: 4rem auto 0;
-  }
-  .review-card {
-    background: var(--dark);
-    padding: 2.5rem;
-    position: relative;
-  }
-  .review-stars {
-    display: flex; gap: 4px; margin-bottom: 1.5rem;
-  }
-  .review-stars span { color: var(--gold); font-size: 0.8rem; }
-  .review-text {
-    font-family: var(--serif);
-    font-size: 1.05rem; font-weight: 300; font-style: italic;
-    line-height: 1.8; color: var(--cream);
-    margin-bottom: 2rem;
-  }
-  .review-quote {
-    position: absolute; top: 1.5rem; right: 2rem;
-    font-family: var(--serif); font-size: 5rem; font-weight: 300;
-    color: rgba(201,168,76,0.07); line-height: 1; user-select: none;
-  }
-  .reviewer-info { display: flex; align-items: center; gap: 1rem; }
-  .reviewer-avatar {
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--dark3);
-    border: 1px solid rgba(201,168,76,0.2);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif); font-size: 1rem;
-    color: var(--gold);
-  }
-  .reviewer-name {
-    font-size: 0.75rem; font-weight: 500;
-    letter-spacing: 0.1em; color: var(--cream);
-    margin-bottom: 0.25rem;
-  }
-  .reviewer-loc {
-    font-size: 0.65rem; letter-spacing: 0.15em;
-    color: var(--text-muted);
-  }
-
-  /* ── STATS ── */
-  #stats {
-    background: var(--gold);
-    padding: 5rem 5%;
-  }
-  .stats-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr);
-    gap: 2px; max-width: 1200px; margin: 0 auto;
-    text-align: center;
-  }
-  .stat-item { padding: 2rem; }
-  .stat-num {
-    font-family: var(--serif); font-size: 3rem; font-weight: 300;
-    color: var(--dark); line-height: 1; margin-bottom: 0.5rem;
-  }
-  .stat-label {
-    font-size: 0.6rem; letter-spacing: 0.3em; text-transform: uppercase;
-    color: rgba(13,13,13,0.6);
-  }
-
-  /* ── CUSTOM ORDER CTA ── */
-  #custom {
-    background: var(--dark3);
-    text-align: center; padding: 8rem 5%;
-  }
-  .custom-inner { max-width: 600px; margin: 0 auto; }
-  .custom-inner p {
-    font-size: 0.85rem; line-height: 2;
-    color: var(--text-muted); margin-bottom: 2.5rem;
-  }
-
-  /* ── CONTACT ── */
-  #contact { background: var(--dark); }
-  .contact-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;
-    max-width: 1200px; margin: 0 auto;
-  }
-  .contact-info p {
-    font-size: 0.85rem; line-height: 2;
-    color: var(--text-muted); margin-bottom: 2rem;
-  }
-  .contact-detail {
-    display: flex; align-items: flex-start; gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-  .contact-icon {
-    width: 36px; height: 36px;
-    border: 1px solid rgba(201,168,76,0.2);
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0; color: var(--gold); font-size: 0.8rem;
-  }
-  .contact-detail-text { font-size: 0.8rem; color: var(--text-muted); line-height: 1.7; }
-  .contact-detail-text strong { color: var(--cream); display: block; font-weight: 400; margin-bottom: 0.2rem; }
-
-  .social-links { display: flex; gap: 1rem; margin-top: 2rem; }
-  .social-link {
-    width: 38px; height: 38px;
-    border: 1px solid rgba(201,168,76,0.2);
-    display: flex; align-items: center; justify-content: center;
-    color: var(--text-muted);
-    text-decoration: none; font-size: 0.75rem;
-    transition: all 0.3s;
-  }
-  .social-link:hover { border-color: var(--gold); color: var(--gold); }
-
-  .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-  .form-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); }
-  .form-input, .form-textarea {
-    background: var(--dark2);
-    border: 1px solid rgba(201,168,76,0.1);
-    color: var(--cream);
-    padding: 0.9rem 1rem;
-    font-family: var(--sans); font-size: 0.85rem; font-weight: 300;
-    outline: none;
-    transition: border-color 0.3s;
-  }
-  .form-input:focus, .form-textarea:focus { border-color: rgba(201,168,76,0.4); }
-  .form-textarea { resize: vertical; min-height: 120px; }
-  .form-submit {
-    display: inline-block; padding: 1rem 2.5rem;
-    background: var(--gold); color: var(--dark);
-    border: none; cursor: pointer;
-    font-family: var(--sans); font-size: 0.65rem; font-weight: 500;
-    letter-spacing: 0.25em; text-transform: uppercase;
-    transition: background 0.3s; align-self: flex-start;
-  }
-  .form-submit:hover { background: var(--gold-light); }
-
-  /* ── FOOTER ── */
-  footer {
-    background: var(--dark2);
-    padding: 3rem 5%;
-    border-top: 1px solid rgba(201,168,76,0.1);
-    display: flex; align-items: center; justify-content: space-between;
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-logo {
-    font-family: var(--serif); font-size: 1.4rem; font-weight: 300;
-    color: var(--gold);
-  }
-  .footer-logo em { font-style: italic; }
-  .footer-copy { font-size: 0.65rem; letter-spacing: 0.1em; color: var(--text-muted); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a {
-    font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--text-muted); text-decoration: none; transition: color 0.3s;
-  }
-  .footer-links a:hover { color: var(--gold); }
-
-  /* ── WHATSAPP FLOAT ── */
-  .wa-float {
-    position: fixed; bottom: 2rem; right: 2rem; z-index: 99;
-    width: 56px; height: 56px; border-radius: 50%;
-    background: #25D366;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.3);
-    text-decoration: none;
-    animation: waPulse 2s 3s infinite;
-    transition: transform 0.3s;
-  }
-  .wa-float:hover { transform: scale(1.1); }
-  .wa-float svg { width: 26px; height: 26px; fill: white; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 0.5; } 50% { opacity: 1; }
-  }
-  @keyframes waPulse {
-    0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.3); }
-    50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6); }
-  }
-
-  .reveal {
-    opacity: 0; transform: translateY(40px);
-    transition: opacity 0.8s, transform 0.8s;
-  }
-  .reveal.visible { opacity: 1; transform: none; }
-
-  /* BG gradients per section */
-  #gallery { position: relative; }
-  #gallery::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 1px;
-    background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 900px) {
-    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-    .gallery-item.wide { grid-column: span 2; }
-    .gallery-item.tall { grid-row: span 1; }
-    .reviews-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .process-grid { grid-template-columns: repeat(2, 1fr); }
-    .mv-grid { grid-template-columns: 1fr; }
-    .nav-links, .nav-cta { display: none; }
-    .nav-hamburger { display: flex; }
-  }
-  @media (max-width: 600px) {
-    .gallery-grid { grid-template-columns: 1fr; }
-    .gallery-item.wide { grid-column: span 1; }
-    .process-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    section { padding: 5rem 1.5rem; }
-  }
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-right{display:none}
+  .hero-left{padding:7rem 2rem 4rem}
+  .hero-left::after{display:none}
+  .about{grid-template-columns:1fr}
+  .about-img{min-height:300px}
+  .about-content{padding:3rem 2rem}
+  .products{padding:4rem 1.5rem}
+  .products-grid{grid-template-columns:1fr 1fr}
+  .product-card.featured{grid-column:span 2}
+  .services{padding:4rem 1.5rem}
+  .services-grid{grid-template-columns:1fr}
+  .testimonials{padding:4rem 1.5rem}
+  .testimonials-grid{grid-template-columns:1fr}
+  .order-cta{grid-template-columns:1fr;gap:2rem;padding:4rem 1.5rem}
+  .contact-strip{padding:1.5rem 1.5rem;flex-direction:column;align-items:flex-start}
+  .contact-info{flex-direction:column;gap:0.8rem}
+  footer{padding:3rem 1.5rem 2rem}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media(max-width:600px){
+  .products-grid{grid-template-columns:1fr}
+  .product-card.featured{grid-column:span 1}
+  .footer-top{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .about-features{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#" class="nav-logo"><em>Abilux</em> Wears</a>
+<!-- NAVIGATION -->
+<nav>
+  <div class="logo">Abilux<span>.</span></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
-    <li><a href="#gallery">Collection</a></li>
-    <li><a href="#process">Craft</a></li>
-    <li><a href="#reviews">Reviews</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#products">Collection</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#order">Order</a></li>
   </ul>
-  <a href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears%2C%20I%20would%20like%20to%20place%20a%20custom%20order." class="nav-cta" target="_blank">Order Now</a>
-  <div class="nav-hamburger" id="hamburger">
-    <span></span><span></span><span></span>
-  </div>
+  <button class="nav-cta" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Now</button>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-lines"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Luxury Nigerian Footwear</p>
-    <h1 class="hero-title">
-      Step Into<br><em>Magnificence</em>
-    </h1>
-    <p class="hero-subtitle">Handcrafted shoes of uncompromising quality, made for those who define their own luxury.</p>
-    <div class="hero-actions">
-      <a href="#gallery" class="btn-primary">View Collection</a>
-      <a href="#about" class="btn-outline">Our Story</a>
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Handcrafted Excellence</div>
+    <h1 class="hero-title">Wear the Art<br>of <em>Bespoke</em><br>Shoemaking</h1>
+    <p class="hero-sub">Every pair is a conversation between leather and craftsmanship. Built for those who refuse ordinary.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">Shop Collection</button>
+      <button class="btn-outline" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order Custom</button>
+    </div>
+    <div class="hero-stats">
+      <div><span class="stat-num">500+</span><span class="stat-label">Pairs Crafted</span></div>
+      <div><span class="stat-num">5yr</span><span class="stat-label">Experience</span></div>
+      <div><span class="stat-num">100%</span><span class="stat-label">Handmade</span></div>
     </div>
   </div>
-  <div class="hero-scroll">Scroll</div>
+  <div class="hero-right">
+    <div class="hero-img-wrap">
+      <div class="hero-shoe-card">
+        <div class="shoe-placeholder">
+          <div class="shoe-silhouette"></div>
+          <span class="shoe-icon">
+            <img src="111.jpeg" alt="">
+          </span>
+        </div>
+        <div class="shoe-name">The Executive Oxford</div>
+        <div class="shoe-price">₦45,000</div>
+        <div class="shoe-meta">
+          <span class="shoe-type">Full-grain leather</span>
+          <span class="shoe-badge">Bestseller</span>
+        </div>
+      </div>
+      <div class="floating-tag tag-tl">Made in Nigeria 🇳🇬</div>
+      <div class="floating-tag tag-bl">Free Sizing Consultation</div>
+    </div>
+  </div>
 </section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="marquee-item"><span class="marquee-dot"></span> Handcrafted Shoes</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Premium Leather</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Custom Orders</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Lagos &amp; Nationwide Delivery</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Bespoke Footwear</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Corporate Gifting</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Handcrafted Shoes</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Premium Leather</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Custom Orders</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Lagos &amp; Nationwide Delivery</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Bespoke Footwear</span>
+    <span class="marquee-item"><span class="marquee-dot"></span> Corporate Gifting</span>
+  </div>
+</div>
 
 <!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-text reveal">
-      <span class="section-eyebrow">Our Story</span>
-      <h2 class="section-title">Born From<br><em>Passion &amp; Precision</em></h2>
-      <div class="divider"></div>
-      <p>Abilux Wears was founded on a singular belief — that African craftsmanship deserves to stand alongside the world's finest luxury houses. Every pair that leaves our workshop is a testament to that belief.</p>
-      <p>From the ateliers of Lagos to the feet of discerning clients across Nigeria and beyond, we blend traditional leatherworking techniques with contemporary silhouettes to produce shoes that are both timeless and unmistakably modern.</p>
-      <a href="#gallery" class="btn-primary" style="margin-top:1rem;">Explore the Collection</a>
-    </div>
-    <div class="about-visual reveal">
-      <div class="about-frame">
-        <div style="text-align:center; padding:2rem;">
-          <div style="font-size:6rem; line-height:1; filter: drop-shadow(0 0 30px rgba(201,168,76,0.3));">👞</div>
-          <p style="font-family:var(--serif); font-size:1.2rem; color:var(--gold); margin-top:1.5rem; font-style:italic;">Est. Excellence</p>
-        </div>
-        <span class="about-frame-label">Abilux Wears Atelier</span>
+<section class="about" id="about">
+  <div class="about-img">
+    <div class="about-pattern"></div>
+    <div class="about-icon-wrap">
+      <div class="about-big-icon">
+        <img src="WhatsApp Image 2026-05-05 at 8.32.16 PM.jpeg" alt="">
       </div>
     </div>
+    <div class="about-badge-float">
+      <span class="num">500+</span>
+      <span class="lbl">Happy Customers</span>
+    </div>
   </div>
-
-  <!-- Mission / Vision -->
-  <div class="mv-grid" style="margin-top:5rem;">
-    <div class="mv-card reveal">
-      <div class="mv-number">01</div>
-      <span class="mv-label">Our Mission</span>
-      <p class="mv-text">To craft footwear of extraordinary quality that elevates everyday living into a luxury experience — using the finest materials, guided by master artisans, and driven by a relentless pursuit of perfection in every stitch and sole.</p>
-    </div>
-    <div class="mv-card reveal">
-      <div class="mv-number">02</div>
-      <span class="mv-label">Our Vision</span>
-      <p class="mv-text">To be the most celebrated luxury footwear brand born from African soil — inspiring a generation of craftspeople and proving to the world that world-class quality can emerge from anywhere when passion meets purpose.</p>
-    </div>
-    <div class="mv-card reveal">
-      <div class="mv-number">03</div>
-      <span class="mv-label">Our Values</span>
-      <p class="mv-text">Integrity in craft. Elegance in design. Exclusivity in execution. We believe the right pair of shoes doesn't just complete an outfit — it completes the person wearing them.</p>
-    </div>
-    <div class="mv-card reveal">
-      <div class="mv-number">04</div>
-      <span class="mv-label">Our Promise</span>
-      <p class="mv-text">Every Abilux shoe comes with a guarantee of excellence. If it doesn't feel extraordinary from the first wear, we make it right. Your satisfaction is not a goal — it is our minimum standard.</p>
+  <div class="about-content">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">Shoes Built With<br><em>Passion &amp; Precision</em></h2>
+    <p class="about-text">At Abilux Wears, we believe that a great shoe is more than footwear — it's a statement of who you are. Every stitch, every cut, every finish is done with intention and care by skilled artisans who take pride in their craft.</p>
+    <p class="about-text">From classic oxfords to bold statement sneakers, we combine traditional shoemaking techniques with modern design to create pieces that last a lifetime.</p>
+    <div class="about-features">
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">Full-grain &amp; genuine leather</div></div>
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">Custom sizing available</div></div>
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">Nationwide delivery</div></div>
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">1-year craftsmanship warranty</div></div>
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">Corporate bulk orders</div></div>
+      <div class="feature-item"><div class="feature-dot"></div><div class="feature-text">Premium quality guaranteed</div></div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery">
-  <div class="gallery-header reveal">
-    <div>
-      <span class="section-eyebrow">The Collection</span>
-      <h2 class="section-title">Our <em>Masterpieces</em></h2>
-    </div>
-    <ul class="gallery-filter">
-      <li><button class="active" onclick="filterGallery('all', this)">All</button></li>
-      <li><button onclick="filterGallery('men', this)">Men</button></li>
-      <li><button onclick="filterGallery('women', this)">Women</button></li>
-      <li><button onclick="filterGallery('custom', this)">Custom</button></li>
-    </ul>
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-header">
+    <div class="section-eyebrow" style="justify-content:center">Our Collection</div>
+    <h2 class="section-title">Signature Pieces</h2>
   </div>
-
-  <div class="gallery-grid" id="galleryGrid">
-
-    <!-- Item 1: Wide -->
-    <div class="gallery-item wide reveal" data-category="men">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #1a1410 0%, #2a1f14 100%); flex-direction:row; gap:2rem; padding:3rem;">
-        <div style="text-align:center;">
-          <div class="shoe-emoji">🥿</div>
-          <p class="shoe-name">The Lagos Executive</p>
-          <p class="shoe-price">From ₦85,000</p>
-        </div>
-        <div style="max-width:300px;">
-          <p style="font-family:var(--serif); font-size:1.1rem; font-style:italic; color:var(--cream); line-height:1.7;">A sleek oxford for the man who commands respect before uttering a word.</p>
+  <div class="products-grid">
+    <div class="product-card featured">
+      <div class="product-img" style="height:360px">
+        <span class="product-img-icon">
+          <img src="123.jpeg" alt="">
+        </span>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
       </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">The Lagos Executive</p>
-        <p class="overlay-price">From ₦85,000</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20ordering%20%E2%80%9CThe%20Lagos%20Executive%E2%80%9D%20shoes.%20Please%20provide%20more%20details." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
+      <span class="product-tag">Featured</span>
+      <div class="product-info">
+        <div class="product-cat">Formal Collection</div>
+        <div class="product-name">The Abilux Classic Oxford</div>
+        <div class="product-price">₦45,000</div>
       </div>
     </div>
-
-    <!-- Item 2 -->
-    <div class="gallery-item reveal" data-category="women">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #1a1019 0%, #2a1024 100%);">
-        <div class="shoe-emoji">👠</div>
-        <p class="shoe-name">The Abuja Stiletto</p>
-        <p class="shoe-price">From ₦72,000</p>
-      </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">The Abuja Stiletto</p>
-        <p class="overlay-price">From ₦72,000</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20ordering%20%E2%80%9CThe%20Abuja%20Stiletto%E2%80%9D.%20Please%20provide%20more%20details." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Item 3: Tall -->
-    <div class="gallery-item tall reveal" data-category="men">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #101a14 0%, #14261a 100%);">
-        <div class="shoe-emoji">👢</div>
-        <p class="shoe-name">The Delta Boot</p>
-        <p class="shoe-price">From ₦110,000</p>
-      </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">The Delta Boot</p>
-        <p class="overlay-price">From ₦110,000</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20ordering%20%E2%80%9CThe%20Delta%20Boot%E2%80%9D.%20Please%20provide%20more%20details." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Item 4 -->
-    <div class="gallery-item reveal" data-category="women">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #1a1510 0%, #261e10 100%);">
-        <div class="shoe-emoji">👡</div>
-        <p class="shoe-name">The Crown Heel</p>
-        <p class="shoe-price">From ₦65,000</p>
-      </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">The Crown Heel</p>
-        <p class="overlay-price">From ₦65,000</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20ordering%20%E2%80%9CThe%20Crown%20Heel%E2%80%9D.%20Please%20provide%20more%20details." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Item 5 -->
-    <div class="gallery-item reveal" data-category="custom">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #0f1520 0%, #162033 100%);">
-        <div class="shoe-emoji">✨</div>
-        <p class="shoe-name">Bespoke Creation</p>
-        <p class="shoe-price">Quote on Request</p>
-      </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">Bespoke Creation</p>
-        <p class="overlay-price">Quote on Request</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20a%20Bespoke%20Custom%20shoe%20order.%20Please%20let%20me%20know%20what%20information%20you%20need." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
-      </div>
-    </div>
-
-    <!-- Item 6 -->
-    <div class="gallery-item reveal" data-category="men">
-      <div class="shoe-render" style="background: linear-gradient(135deg, #1a1010 0%, #2a1414 100%);">
-        <div class="shoe-emoji">👞</div>
-        <p class="shoe-name">The Ibadan Loafer</p>
-        <p class="shoe-price">From ₦58,000</p>
-      </div>
-      <div class="gallery-overlay">
-        <p class="overlay-title">The Ibadan Loafer</p>
-        <p class="overlay-price">From ₦58,000</p>
-        <a class="overlay-order" href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20am%20interested%20in%20ordering%20%E2%80%9CThe%20Ibadan%20Loafer%E2%80%9D.%20Please%20provide%20more%20details." target="_blank">
-          <svg class="whatsapp-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-          Order on WhatsApp
-        </a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div style="max-width:1200px; margin:0 auto;" class="reveal">
-    <span class="section-eyebrow">How We Create</span>
-    <h2 class="section-title">The Art of <em>Handcraft</em></h2>
-  </div>
-  <div class="process-grid">
-    <div class="process-step reveal">
-      <div class="process-num">01</div>
-      <p class="process-title">Material Selection</p>
-      <p class="process-text">We source only the finest full-grain leathers, premium suedes, and exotic materials — each hand-inspected for quality, texture, and grain consistency before a single cut is made.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="process-num">02</div>
-      <p class="process-title">Pattern & Design</p>
-      <p class="process-text">Our master artisans draft precise patterns tailored to each design. Every curve and proportion is calibrated for both aesthetic beauty and ergonomic comfort.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="process-num">03</div>
-      <p class="process-title">Hand Stitching</p>
-      <p class="process-text">Using traditional saddle-stitch techniques passed down through generations, every seam is sewn by hand — creating bonds that outlast machine-stitching by decades.</p>
-    </div>
-    <div class="process-step reveal">
-      <div class="process-num">04</div>
-      <p class="process-title">Finishing & Polish</p>
-      <p class="process-text">The final stage involves edge finishing, sole attachment, and a multi-step polish that brings out the leather's natural beauty. Your shoe is then wrapped and presented as the luxury it is.</p>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section id="stats">
-  <div class="stats-grid">
-    <div class="stat-item reveal">
-      <div class="stat-num">500+</div>
-      <div class="stat-label">Satisfied Clients</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">8+</div>
-      <div class="stat-label">Years of Craft</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">100%</div>
-      <div class="stat-label">Handcrafted</div>
-    </div>
-    <div class="stat-item reveal">
-      <div class="stat-num">30+</div>
-      <div class="stat-label">Unique Designs</div>
-    </div>
-  </div>
-</section>
-
-<!-- REVIEWS -->
-<section id="reviews">
-  <div style="max-width:1200px; margin:0 auto; text-align:center;" class="reveal">
-    <span class="section-eyebrow">Client Testimonials</span>
-    <h2 class="section-title">Words of <em>Admiration</em></h2>
-  </div>
-  <div class="reviews-grid">
-    <div class="review-card reveal">
-      <div class="review-stars">
-        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-      </div>
-      <p class="review-text">"I wore my Abilux pair to my wedding and received more compliments on my shoes than anything else. The craftsmanship is unlike anything I've ever owned. Truly world-class."</p>
-      <div class="review-quote">"</div>
-      <div class="reviewer-info">
-        <div class="reviewer-avatar">EO</div>
-        <div>
-          <p class="reviewer-name">Emeka Okonkwo</p>
-          <p class="reviewer-loc">Lagos, Nigeria</p>
+    <div class="product-card">
+      <div class="product-img">
+        <span class="product-img-icon">
+          <img src="121.jpeg" alt="">
+        </span>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
       </div>
-    </div>
-    <div class="review-card reveal">
-      <div class="review-stars">
-        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-      </div>
-      <p class="review-text">"My bespoke heels from Abilux are my most treasured possession. They fit perfectly, look breathtaking, and every woman I encounter asks where I got them. The service was exceptional."</p>
-      <div class="review-quote">"</div>
-      <div class="reviewer-info">
-        <div class="reviewer-avatar">AA</div>
-        <div>
-          <p class="reviewer-name">Adaeze Achebe</p>
-          <p class="reviewer-loc">Abuja, Nigeria</p>
-        </div>
+      <span class="product-tag">New</span>
+      <div class="product-info">
+        <div class="product-cat">Casual Collection</div>
+        <div class="product-name">Urban Leather Loafer</div>
+        <div class="product-price">₦32,000</div>
       </div>
     </div>
-    <div class="review-card reveal">
-      <div class="review-stars">
-        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-      </div>
-      <p class="review-text">"I've worn Italian shoes, I've worn French shoes — my Abilux Wears executive oxfords stand right alongside them. We have world-class talent right here in Nigeria and this brand proves it."</p>
-      <div class="review-quote">"</div>
-      <div class="reviewer-info">
-        <div class="reviewer-avatar">TI</div>
-        <div>
-          <p class="reviewer-name">Tunde Ibrahim</p>
-          <p class="reviewer-loc">Port Harcourt, Nigeria</p>
+    <div class="product-card">
+      <div class="product-img">
+        <span class="product-img-icon">
+          <img src="11.jpeg" alt="">
+        </span>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
         </div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Ladies Collection</div>
+        <div class="product-name">Abilux Court Heel</div>
+        <div class="product-price">₦28,000</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <span class="product-img-icon">
+          <img src="111.jpeg" alt="">
+        </span>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
+        </div>
+      </div>
+      <span class="product-tag">Popular</span>
+      <div class="product-info">
+        <div class="product-cat">Corporate Collection</div>
+        <div class="product-name">Executive Derby Boot</div>
+        <div class="product-price">₦38,000</div>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img">
+        <span class="product-img-icon">
+          <img src="1.jpeg" alt="">
+        </span>
+        <div class="product-overlay">
+          <button class="overlay-btn" onclick="document.getElementById('order').scrollIntoView({behavior:'smooth'})">Order This Style</button>
+        </div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Bespoke</div>
+        <div class="product-name">Custom Order — Any Style</div>
+        <div class="product-price">From ₦25,000</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CUSTOM ORDER CTA -->
-<section id="custom">
-  <div class="custom-inner reveal">
-    <span class="section-eyebrow">Bespoke Service</span>
-    <h2 class="section-title">Your Vision,<br><em>Our Craft</em></h2>
-    <div class="divider" style="margin: 2rem auto;"></div>
-    <p>Can't find exactly what you're looking for? We offer a full bespoke service — from initial design sketches to final delivery. Tell us your occasion, your style, your measurements, and we'll create something entirely yours.</p>
-    <a href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20would%20like%20to%20discuss%20a%20bespoke%20custom%20shoe%20order.%20Please%20guide%20me%20through%20the%20process." class="btn-primary" target="_blank">Start Your Bespoke Order</a>
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="section-eyebrow" style="justify-content:center;color:var(--gold)">What We Offer</div>
+    <h2 class="section-title" style="color:var(--cream)">Our Services</h2>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-grid">
-    <div class="contact-info reveal">
-      <span class="section-eyebrow">Get In Touch</span>
-      <h2 class="section-title">Let's <em>Connect</em></h2>
-      <div class="divider"></div>
-      <p>Whether you have a question about sizing, want to discuss a custom order, or simply wish to learn more about our collection — we are always happy to hear from you.</p>
-
-      <div class="contact-detail">
-        <div class="contact-icon">📱</div>
-        <div class="contact-detail-text">
-          <strong>WhatsApp & Phone</strong>
-          +234 903 992 8275
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">📍</div>
-        <div class="contact-detail-text">
-          <strong>Location</strong>
-          Abuja, FCT, Nigeria
-        </div>
-      </div>
-      <div class="contact-detail">
-        <div class="contact-icon">🕐</div>
-        <div class="contact-detail-text">
-          <strong>Working Hours</strong>
-          Monday – Saturday: 9am – 7pm
-        </div>
-      </div>
-
-      <div class="social-links">
-        <a href="#" class="social-link" title="Instagram">IG</a>
-        <a href="#" class="social-link" title="Facebook">FB</a>
-        <a href="#" class="social-link" title="Twitter/X">𝕏</a>
-        <a href="https://wa.me/2349039928275" class="social-link" title="WhatsApp" target="_blank">WA</a>
-      </div>
+  <div class="services-grid">
+    <div class="service-item">
+      <div class="service-num">01</div>
+      <span class="service-icon">✂️</span>
+      <div class="service-name">Bespoke Shoemaking</div>
+      <div class="service-desc">Fully custom shoes made to your exact measurements, style preference, and material choice. A truly one-of-a-kind pair.</div>
+      <div class="service-price">From ₦25,000</div>
     </div>
-
-    <div class="reveal">
-      <form class="contact-form" onsubmit="handleFormSubmit(event)">
-        <div class="form-group">
-          <label class="form-label">Full Name</label>
-          <input type="text" class="form-input" placeholder="Your name" id="fname" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Phone / WhatsApp</label>
-          <input type="tel" class="form-input" placeholder="+234 xxx xxx xxxx" id="fphone">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input type="email" class="form-input" placeholder="your@email.com" id="femail">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" id="fmessage" placeholder="Tell us what you're looking for…" required></textarea>
-        </div>
-        <button type="submit" class="form-submit">Send via WhatsApp</button>
-      </form>
+    <div class="service-item">
+      <div class="service-num">02</div>
+      <span class="service-icon">👞</span>
+      <div class="service-name">Ready-to-Wear Collection</div>
+      <div class="service-desc">Shop our curated range of handcrafted shoes available in standard sizes, ready to ship within 3–5 business days.</div>
+      <div class="service-price">From ₦18,000</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">03</div>
+      <span class="service-icon">🏢</span>
+      <div class="service-name">Corporate Bulk Orders</div>
+      <div class="service-desc">Branded or standardized footwear for companies and organizations. Custom logos, colors, and packaging available.</div>
+      <div class="service-price">Negotiable</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">04</div>
+      <span class="service-icon">🔧</span>
+      <div class="service-name">Shoe Repair &amp; Restoration</div>
+      <div class="service-desc">Extend the life of your favorite pair. We repair soles, stitching, heels, and do full leather restoration.</div>
+      <div class="service-price">From ₦3,000</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">05</div>
+      <span class="service-icon">🎁</span>
+      <div class="service-name">Gift &amp; Occasion Packages</div>
+      <div class="service-desc">Bespoke shoe gift sets for weddings, graduations, and special events. Premium packaging included.</div>
+      <div class="service-price">From ₦30,000</div>
+    </div>
+    <div class="service-item">
+      <div class="service-num">06</div>
+      <span class="service-icon">📦</span>
+      <div class="service-name">Nationwide Delivery</div>
+      <div class="service-desc">We ship to all states in Nigeria. Fast, secure, and trackable delivery on every order placed with us.</div>
+      <div class="service-price">Free above ₦50,000</div>
     </div>
   </div>
 </section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+  <div class="testimonials-header">
+    <div class="section-eyebrow" style="justify-content:center">Client Reviews</div>
+    <h2 class="section-title">What Our Customers Say</h2>
+  </div>
+  <div class="testimonials-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">I ordered a custom Oxford for my wedding and they exceeded every expectation. The leather quality and fit were absolutely perfect. I've received so many compliments.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">AK</div>
+        <div><div class="testi-name">Adewale Kamoru</div><div class="testi-loc">Lagos, Nigeria</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">Abilux Wears did a bulk order for our company event — 30 pairs in our brand colors. Delivered on time, perfectly finished. We'll definitely be returning customers.</p>
+      <div class="testi-author">
+        <div class="testi-avatar">FC</div>
+        <div><div class="testi-name">Fatima Chukwu</div><div class="testi-loc">Abuja, Nigeria</div></div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">The court heels I ordered were stunning. Very comfortable, great finishing and the packaging was so elegant. Exactly what I wanted and more. 10/10 recommend!</p>
+      <div class="testi-author">
+        <div class="testi-avatar">NB</div>
+        <div><div class="testi-name">Ngozi Babatunde</div><div class="testi-loc">Port Harcourt, Nigeria</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<section class="order-cta" id="order">
+  <div class="order-content">
+    <div class="section-eyebrow">Place an Order</div>
+    <h2 class="section-title">Ready to Step Up<br>Your <em>Style?</em></h2>
+    <p class="order-text">Fill the form and our team will reach out within 24 hours to confirm your order details, measurements, and delivery timeline.</p>
+    <div style="display:flex;flex-direction:column;gap:1rem">
+      <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(253,252,251,0.6)"><span style="color:var(--gold)">✓</span> Free sizing consultation on all custom orders</div>
+      <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(253,252,251,0.6)"><span style="color:var(--gold)">✓</span> 50% deposit to start, balance on delivery</div>
+      <div style="display:flex;align-items:center;gap:0.8rem;font-size:0.82rem;color:rgba(253,252,251,0.6)"><span style="color:var(--gold)">✓</span> 7–14 business days production time</div>
+    </div>
+  </div>
+  <div class="order-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="fname">First Name</label>
+        <input class="form-input" type="text" id="fname" placeholder="John"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="lname">Last Name</label>
+        <input class="form-input" type="text" id="lname" placeholder="Doe"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="phone">Phone Number</label>
+      <input class="form-input" type="tel" id="phone" placeholder="+234 800 000 0000"/>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="service">Service</label>
+      <select class="form-input" id="service">
+        <option value="">Select a service...</option>
+        <option>Bespoke Custom Order</option>
+        <option>Ready-to-Wear Collection</option>
+        <option>Corporate Bulk Order</option>
+        <option>Shoe Repair &amp; Restoration</option>
+        <option>Gift Package</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label class="form-label" for="size">Shoe Size</label>
+        <input class="form-input" type="text" id="size" placeholder="e.g. 42 / UK 8"/>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="budget">Budget (₦)</label>
+        <input class="form-input" type="text" id="budget" placeholder="e.g. 35,000"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="form-label" for="notes">Additional Notes</label>
+      <input class="form-input" type="text" id="notes" placeholder="Style, color, occasion..."/>
+    </div>
+    <button class="submit-btn" onclick="handleOrder()">Send Order Request →</button>
+  </div>
+</section>
+
+<!-- CONTACT STRIP -->
+<div class="contact-strip">
+  <div class="contact-strip-text">Get in touch with us today</div>
+  <div class="contact-info">
+    <div class="contact-item">📞 +234 800 000 0000</div>
+    <div class="contact-item">📧 hello@abiluxwears.com</div>
+    <div class="contact-item">📍 Nigeria</div>
+  </div>
+</div>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-logo"><em>Abilux</em> Wears</div>
-  <div class="footer-links">
-    <a href="#about">About</a>
-    <a href="#gallery">Collection</a>
-    <a href="#contact">Contact</a>
-    <a href="https://wa.me/2349039928275" target="_blank">WhatsApp</a>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">Abilux<span>.</span></div>
+      <p class="footer-desc">Handcrafted shoes for those who value quality, style, and authenticity. Made in Nigeria, worn worldwide.</p>
+    </div>
+    <div>
+      <div class="footer-heading">Collection</div>
+      <ul class="footer-links">
+        <li><a href="#products">Classic Oxford</a></li>
+        <li><a href="#products">Leather Loafer</a></li>
+        <li><a href="#products">Court Heels</a></li>
+        <li><a href="#products">Derby Boots</a></li>
+        <li><a href="#order">Custom Orders</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Bespoke Shoemaking</a></li>
+        <li><a href="#services">Bulk / Corporate</a></li>
+        <li><a href="#services">Shoe Repair</a></li>
+        <li><a href="#services">Gift Packages</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-heading">Contact</div>
+      <ul class="footer-links">
+        <li><a href="https://wa.me/2348000000000" target="_blank">WhatsApp Us</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="mailto:hello@abiluxwears.com">Email Us</a></li>
+      </ul>
+    </div>
   </div>
-  <p class="footer-copy">© 2025 Abilux Wears. Luxury Footwear, Handcrafted in Nigeria.</p>
+  <div class="footer-bottom">
+    <div class="copyright">© 2025 Abilux Wears. All rights reserved. Made with ❤️ in Nigeria.</div>
+    <div class="footer-socials">
+      <a class="social-link" href="https://instagram.com" target="_blank" aria-label="Instagram">ig</a>
+      <a class="social-link" href="https://facebook.com" target="_blank" aria-label="Facebook">fb</a>
+      <a class="social-link" href="https://wa.me/2348000000000" target="_blank" aria-label="WhatsApp">wa</a>
+    </div>
+  </div>
 </footer>
 
-<!-- Floating WhatsApp Button -->
-<a href="https://wa.me/2349039928275?text=Hello%20Abilux%20Wears!%20I%20would%20like%20to%20enquire%20about%20your%20shoes." class="wa-float" target="_blank" title="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.524 5.85L.073 23.927l6.236-1.407A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.817 9.817 0 01-5.006-1.368l-.36-.213-3.7.835.884-3.605-.234-.372A9.817 9.817 0 012.182 12C2.182 6.574 6.574 2.182 12 2.182S21.818 6.574 21.818 12 17.426 21.818 12 21.818z"/></svg>
-</a>
-
 <script>
-  // Navbar scroll effect
-  const navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 80);
-  });
-
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  revealEls.forEach(el => revealObserver.observe(el));
-
-  // Gallery filter
-  function filterGallery(category, btn) {
-    document.querySelectorAll('.gallery-filter button').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      const cat = item.dataset.category;
-      item.style.display = (category === 'all' || cat === category) ? 'block' : 'none';
-    });
+function handleOrder(){
+  var fname = document.getElementById('fname').value.trim();
+  var phone = document.getElementById('phone').value.trim();
+  var service = document.getElementById('service').value;
+  if(!fname || !phone || !service){
+    alert('Please fill in your name, phone number, and select a service.');
+    return;
   }
-
-  // Contact form → WhatsApp
-  function handleFormSubmit(e) {
-    e.preventDefault();
-    const name = document.getElementById('fname').value;
-    const phone = document.getElementById('fphone').value;
-    const email = document.getElementById('femail').value;
-    const message = document.getElementById('fmessage').value;
-    const text = `Hello Abilux Wears!\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email}\n\nMessage:\n${message}`;
-    window.open('https://wa.me/2349039928275?text=' + encodeURIComponent(text), '_blank');
-  }
+  alert('Thank you, ' + fname + '! Your order request has been received. We will contact you on ' + phone + ' within 24 hours.');
+}
 </script>
+
 </body>
 </html>
