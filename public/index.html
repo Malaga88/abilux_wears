@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<meta name="description" content="Abilux Wears — Handcrafted premium shoes made in Nigeria. Bespoke shoemaking, custom orders, corporate bulk orders and nationwide delivery."/>
-<meta name="author" content="Abilux Wears"/>
+<meta name="description" content="AbiLux Wears — Handcrafted premium shoes made in Nigeria. Bespoke shoemaking, custom orders, corporate bulk orders and nationwide delivery."/>
+<meta name="author" content="AbiLux Wears"/>
 <meta name="theme-color" content="#FFFFFF"/>
-<title>Abilux Wears | Handcrafted Premium Shoes — Made in Nigeria</title>
+<title>AbiLux Wears | Handcrafted Premium Shoes — Made in Nigeria</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;600;700;800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet"/>
 <style>
-/* ===== Abilux Wears — mobile-first. Base = phone; larger screens add via min-width ===== */
+/* ===== AbiLux Wears — mobile-first. Base = phone; larger screens add via min-width ===== */
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
   --bg:#FFFFFF;--bg-2:#F1EDE4;--bg-3:#E6E0D3;--text:#1C1C1C;--text-2:rgba(28,28,28,.82);
@@ -43,7 +43,7 @@ h3{font-weight:600}
 /* nav — phone: logo + menu button, dropdown links */
 nav{position:fixed;inset:0 0 auto 0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:.8rem var(--pad);color:var(--text);transition:background .3s,box-shadow .3s}
 nav.scrolled,nav.menu-open{background:rgba(255,255,255,.95);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line)}
-.logo{font:800 1.3rem var(--display);text-decoration:none;letter-spacing:.06em;text-transform:uppercase}
+.logo{font:800 1.3rem var(--display);text-decoration:none;letter-spacing:.02em}
 .logo span{color:var(--red-text)}
 .menu-btn{display:grid;place-items:center;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:50%;color:inherit;font-size:1.15rem;cursor:pointer}
 .nav-links{position:absolute;top:100%;left:0;right:0;display:none;flex-direction:column;list-style:none;background:var(--bg);padding:.25rem var(--pad) 1.2rem;box-shadow:0 18px 30px rgba(28,28,28,.15)}
@@ -53,11 +53,11 @@ nav.scrolled,nav.menu-open{background:rgba(255,255,255,.95);backdrop-filter:blur
 .nav-cta{display:none}
 
 /* hero — phone */
-.hero{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center;min-height:100svh;padding:6.5rem var(--pad) 5.5rem;position:relative;overflow:hidden;isolation:isolate;
+.hero{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center;min-height:100svh;padding:6.5rem var(--pad) 8.5rem;position:relative;overflow:hidden;isolation:isolate;
   background:radial-gradient(ellipse 120% 45% at 0% 100%,rgba(179,38,30,.2),transparent 65%),radial-gradient(ellipse 90% 35% at 0% 25%,rgba(179,38,30,.07),transparent 70%),var(--bg)}
 .hero::before{content:'';position:absolute;inset:0;z-index:-2;opacity:.16;mix-blend-mode:overlay;background-image:var(--grain)}
-.hero-word{position:absolute;left:50%;bottom:-.06em;transform:translateX(-50%);z-index:-1;font:200 clamp(4.5rem,27vw,9rem)/.8 var(--display);letter-spacing:.02em;white-space:nowrap;text-transform:uppercase;user-select:none;pointer-events:none;
-  background:linear-gradient(to bottom,var(--red) 15%,rgba(179,38,30,0) 95%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-word{position:absolute;left:50%;bottom:1.1rem;transform:translateX(-50%);z-index:-1;font:800 clamp(4rem,23vw,9rem)/.85 var(--display);letter-spacing:-.01em;white-space:nowrap;text-transform:none;padding:.16em .05em 0;user-select:none;pointer-events:none;
+  background:linear-gradient(to bottom,var(--red) 30%,rgba(179,38,30,.38) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hero-copy{position:relative;z-index:1}
 .hero-copy>p.note{color:var(--red-text);font:600 .72rem var(--display);letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.1rem;display:flex;align-items:center;gap:.8rem}
 .hero-copy>p.note::before{content:'';width:34px;border-top:2px solid var(--red)}
@@ -310,8 +310,8 @@ footer ul a:hover{color:var(--red-text)}
 
 /* ===== ≥1000px: desktop hero ===== */
 @media(min-width:1000px){
-  .hero{grid-template-columns:1.05fr .95fr;gap:3rem;min-height:100vh;padding:8rem var(--pad) clamp(6rem,15vw,12rem)}
-  .hero-word{font-size:clamp(5rem,20vw,20rem);bottom:-.08em}
+  .hero{grid-template-columns:1.05fr .95fr;gap:3rem;min-height:100vh;padding:8rem var(--pad) clamp(7rem,17vw,15rem)}
+  .hero-word{font-size:clamp(5rem,21vw,22rem);bottom:.6rem}
   .hero-copy>p.note{font-size:.82rem;margin-bottom:1.4rem}
   .hero h1{font-size:clamp(2.6rem,4.8vw,4.5rem);margin-bottom:1.4rem}
   .lead{font-size:1.08rem;margin-bottom:2rem}
@@ -362,7 +362,7 @@ nav{animation:navIn .8s cubic-bezier(.2,.7,.2,1) backwards}
 
 /* hero motion */
 .hero::after{content:'';position:absolute;z-index:-1;left:-25%;bottom:-25%;width:90vmax;height:90vmax;max-width:1100px;max-height:1100px;border-radius:50%;background:radial-gradient(circle,rgba(179,38,30,.2),transparent 62%);animation:glowPulse 7s ease-in-out infinite;pointer-events:none}
-.hero-word{translate:0 calc(var(--sy,0) * .1px);animation:wordIn 1.6s .3s cubic-bezier(.2,.7,.2,1) backwards,breathe 6s 2s ease-in-out infinite}
+.hero-word{translate:0 calc(var(--sy,0) * -.04px);animation:wordIn 1.6s .3s cubic-bezier(.2,.7,.2,1) backwards,breathe 6s 2s ease-in-out infinite}
 .hero-visual{translate:0 calc(var(--sy,0) * -.05px)}
 .shot{animation:floatY 7s ease-in-out infinite}
 .hang-tag{animation:floatY2 5.5s ease-in-out infinite}
@@ -383,7 +383,7 @@ nav{animation:navIn .8s cubic-bezier(.2,.7,.2,1) backwards}
 /* second marquee: outline type, runs the other way */
 .marquee-2{background:transparent;color:transparent;padding:1.2rem 0;border-block:1px solid var(--line)}
 .marquee-2 .marquee-track{animation-duration:46s;animation-direction:reverse}
-.marquee-2 span{font:800 clamp(2.4rem,10vw,4.6rem)/1 var(--display);letter-spacing:.02em;text-transform:uppercase;-webkit-text-stroke:1px rgba(28,28,28,.5);color:transparent}
+.marquee-2 span{font:800 clamp(2.4rem,10vw,4.6rem)/1 var(--display);letter-spacing:.02em;text-transform:uppercase;-webkit-text-stroke:1px rgba(28,28,28,.5);color:transparent;text-transform:none}
 .marquee-2 span:nth-child(even){-webkit-text-stroke:0;color:var(--red)}
 .marquee-2 span::after{background:var(--red);opacity:1;width:10px;height:10px}
 .marquee .marquee-track{gap:0}
@@ -463,7 +463,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
   <div class="hero-word" aria-hidden="true">AbiLux</div>
   <div class="hero-copy">
     <p class="note">Handcrafted in Nigeria</p>
-    <h1>Wear the art of <em>AbiLux</em> Wears</h1>
+    <h1>Wear the art of <em>bespoke</em> shoemaking</h1>
     <p class="lead">Every pair is a conversation between leather and craftsmanship. Built for those who refuse ordinary.</p>
     <div class="hero-btns">
       <a class="btn btn-line" href="#products"><i class="fa-solid fa-bag-shopping"></i> Shop collection</a>
@@ -504,7 +504,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
 
 <section class="about" id="about">
   <div class="about-img">
-    <img src="WhatsApp Image 2026-05-05 at 8.32.16 PM.jpeg" alt="Abilux Wears craftsmanship" loading="lazy"/>
+    <img src="WhatsApp Image 2026-05-05 at 8.32.16 PM.jpeg" alt="AbiLux Wears craftsmanship" loading="lazy"/>
     <div class="badge"><b>500+</b><small>Happy customers</small></div>
   </div>
   <div>
@@ -530,7 +530,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
   <div class="grid">
     <article class="card featured">
       <span class="tag">Featured</span>
-      <div class="pimg"><img src="123.jpeg" alt="The Abilux Classic Oxford" loading="lazy"/>
+      <div class="pimg"><img src="123.jpeg" alt="The AbiLux Classic Oxford" loading="lazy"/>
         <div class="over"><a class="btn btn-red" href="#order">Order this style</a></div></div>
       <div class="pinfo"><div><small>Female collection</small><h3>The AbiLux Classic Oxford</h3></div><span class="price">₦10,000</span></div>
     </article>
@@ -541,9 +541,9 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
       <div class="pinfo"><div><small>Casual collection</small><h3>Urban Leather</h3></div><span class="price">₦20,000</span></div>
     </article>
     <article class="card">
-      <div class="pimg"><img src="11.jpeg" alt="Abilux Court Heel" loading="lazy"/>
+      <div class="pimg"><img src="11.jpeg" alt="AbiLux Court Heel" loading="lazy"/>
         <div class="over"><a class="btn btn-red" href="#order">Order this style</a></div></div>
-      <div class="pinfo"><div><small>Native collection</small><h3>Abilux Court Palm</h3></div><span class="price">₦12,000</span></div>
+      <div class="pinfo"><div><small>Native collection</small><h3>AbiLux Court Palm</h3></div><span class="price">₦12,000</span></div>
     </article>
     <article class="card">
       <span class="tag">Popular</span>
@@ -596,7 +596,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
     <div class="stack">
       <figure class="quote">
         <div class="stars" aria-label="5 stars">★★★★★</div>
-        <blockquote>Abilux Wears did a bulk order for our company event — 30 pairs in our brand colors. Delivered on time, perfectly finished. We’ll definitely be returning customers.</blockquote>
+        <blockquote>AbiLux Wears did a bulk order for our company event — 30 pairs in our brand colors. Delivered on time, perfectly finished. We’ll definitely be returning customers.</blockquote>
         <figcaption class="who"><span class="av">FC</span><span><b>Fatima Chukwu</b><small>Abuja, Nigeria</small></span></figcaption>
       </figure>
       <figure class="quote">
@@ -610,8 +610,8 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
 
 <div class="marquee marquee-2" aria-hidden="true">
   <div class="marquee-track">
-    <span>Abilux</span><span>Handcrafted</span><span>Made in Nigeria</span><span>Bespoke</span>
-    <span>Abilux</span><span>Handcrafted</span><span>Made in Nigeria</span><span>Bespoke</span>
+    <span>AbiLux</span><span>HANDCRAFTED</span><span>MADE IN NIGERIA</span><span>BESPOKE</span>
+    <span>AbiLux</span><span>HANDCRAFTED</span><span>MADE IN NIGERIA</span><span>BESPOKE</span>
   </div>
 </div>
 
@@ -662,7 +662,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
 <footer>
   <div class="ftop">
     <div>
-      <a class="logo" href="#top">Abilux<span>.</span></a>
+      <a class="logo" href="#top">AbiLux<span>.</span></a>
       <p class="fdesc">Handcrafted shoes for those who value quality, style, and authenticity. Made in Nigeria, worn worldwide.</p>
     </div>
     <div>
@@ -696,7 +696,7 @@ h2::after{content:'';display:block;width:3rem;height:4px;border-radius:4px;backg
     </div>
   </div>
   <div class="fbot">
-    <div>© <span id="yr">2026</span> Abilux Wears. All rights reserved. Made with ❤️ in Nigeria.</div>
+    <div>© <span id="yr">2026</span> AbiLux Wears. All rights reserved. Made with ❤️ in Nigeria.</div>
     <div class="socials">
       <a href="https://www.instagram.com/abilux_wears/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
       <a href="https://www.facebook.com/share/1BaJFXnxof/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
@@ -720,9 +720,9 @@ document.getElementById('yr').textContent=new Date().getFullYear();
 // hero showcase
 const slides=[
   ['The Executive Beckingstock','₦25,000','Full-grain leather · Bestseller'],
-  ['The Abilux Classic Oxford','₦10,000','Female collection · Featured'],
+  ['The AbiLux Classic Oxford','₦10,000','Female collection · Featured'],
   ['Urban Leather','₦20,000','Casual collection · New'],
-  ['Abilux Court Palm','₦12,000','Native collection']
+  ['AbiLux Court Palm','₦12,000','Native collection']
 ];
 const imgs=[...document.querySelectorAll('.shot img')],dots=document.querySelector('.dots'),tag=document.getElementById('tag');
 let cur=0,timer;
